@@ -12,8 +12,8 @@ var steamTrade = new SteamTrade();
 
 
 var sentry = fs.readFileSync('sentry');
-var pseudo = 'ilthados';
-var mdp = 'alverde1';
+var pseudo = 'login';
+var mdp = 'password';
 var nomBot = '[BOT] Yadasko';
 var admin = '76561198002996534';
 
