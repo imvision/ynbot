@@ -1,0 +1,41 @@
+!!!5
+html
+	head
+		title #{title}Log
+		link(rel='stylesheet', href='/styles/css/bootstrap.css')
+		script(src='/socket.io/socket.io.js')
+		script(src='/styles/js/log.js')
+	body
+		div.container-fluid
+			div.navbar
+				div.navbar-inner
+					ul.nav
+						li
+							a(href='#') Accueil
+						li.divider-vertical
+						li
+							a(href='test') Contrôle du bot
+						li
+							a(href="log") Activités du bot
+					form.navbar-search.pull-right
+						input.search-query(type='text',placeholder='Recherche')
+			h1.text-center Mais qué c'est qu'tu fais ?
+			div.well#test
+				a.btn.btn-success.offset12(href='#', onclick="supprimer()") Supprimer les logs
+				table.table.table-condensed
+					thead
+						th Heure
+						th Type
+						th Evenement
+					tbody#tableau
+
+script(src='/styles/js/jquery.js')
+//script(src='/styles/js/bootstrap-modal.js')
+//script(src='/styles/js/bootstrap-transition.js')
+//script(src='/styles/js/bootstrap-tab.js')
+//script(src='/styles/js/bootstrap-dropdown.js')
+//script(src='/styles/js/bootstrap-carousel.js')
+//script(src='/styles/js/bootstrap-tooltip.js')
+//script(src='/styles/js/bootstrap-popover.js')
+//script(src='/styles/js/bootstrap-typeahead.js')
+script(src='/styles/js/bootstrap-alert.js')

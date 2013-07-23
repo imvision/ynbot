@@ -1,0 +1,71 @@
+!!!5
+html
+	head
+		title Perso
+		link(rel='stylesheet', href='/styles/css/bootstrap.css')
+		script(src='/socket.io/socket.io.js')
+		script(src='/styles/js/bot.js')
+		script.
+			etat = '#{etat}';
+			isLaunched = #{isLaunched};
+	body
+		div.container-fluid
+			div.navbar
+				div.navbar-inner
+					ul.nav
+						li
+							a(href='#') Accueil
+						li.divider-vertical
+						li
+							a(href='test') Contrôle du bot
+						li
+							a(href="log") Activités du bot
+					form.navbar-search.pull-right
+						input.search-query(type='text',placeholder='Recherche')
+			div.hero-unit
+				h1 Contrôle du bot
+				p C'est tout de suite plus facile !
+			div.row-fluid
+				span#afficher
+				span#label
+					
+			div.row-fluid
+				p  
+			div.row-fluid
+				div.span4.offset1
+					div.alertPseudo.alert.alert-block.alert-success.span7.hide(style='display: none;')
+						button.closePseudo.close(type='button') x
+						p#textPseudo 
+					div
+						form.offset1#formPseudo(action='/signup',method='post', onsubmit='return changerPseudo()')
+							label.checkbox Pseudo du bot : 
+								input.input-small#pseudo(type='text')
+				div.span1
+					div.btn-group#btnEtat
+						a.btn.btn-success(href='#', onclick="enLigne()") En ligne
+						a.btn.btn-warning(href='#', onclick="occupe()")	Occupé
+						a.btn.btn-danger(href='#', onclick="horsLigne()") Hors-ligne
+			div.row-fluid
+				p
+			div.row-fluid
+				div.span4.offset1
+					div.alertTrade.alert.alert-block.span7.hide(style='display: none;')
+						button.closeTrade.close(type='button') x
+						p#textTrade 
+					div.control-group
+						form.offset1#formTrade(action='/signup',method='post', onsubmit='return echangeAvec()')
+							label.checkbox Echanger avec : 
+								span#pseudoForm
+									
+									
+			
+script(src='/styles/js/jquery.js')
+//script(src='/styles/js/bootstrap-modal.js')
+//script(src='/styles/js/bootstrap-transition.js')
+//script(src='/styles/js/bootstrap-tab.js')
+//script(src='/styles/js/bootstrap-dropdown.js')
+//script(src='/styles/js/bootstrap-carousel.js')
+//script(src='/styles/js/bootstrap-tooltip.js')
+//script(src='/styles/js/bootstrap-popover.js')
+//script(src='/styles/js/bootstrap-typeahead.js')
+script(src='/styles/js/bootstrap-alert.js')
